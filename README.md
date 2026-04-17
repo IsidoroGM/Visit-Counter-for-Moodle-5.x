@@ -1,4 +1,4 @@
-# Visit Counter (Professional) para Moodle
+# Visit Counter para Moodle
 
 Este proyecto consiste en un sistema de dos plugins integrados para Moodle que permiten rastrear y mostrar el número de visitas reales de un usuario a un curso específico.
 
