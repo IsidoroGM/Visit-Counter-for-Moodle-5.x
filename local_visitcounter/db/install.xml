@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/visitcounter/db" VERSION="2026041600" COMMENT="XMLDB file for local_visitcounter plugin">
+  <TABLES>
+    <TABLE NAME="local_visitcounter" COMMENT="Registro de visitas a cursos">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="ID principal autonumerico"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID del usuario que visita"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID del curso visitado"/>
+        <FIELD NAME="visits" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="1" COMMENT="Numero total de visitas"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Timestamp de la ultima visita"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Llave primaria"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="usercourse_idx" UNIQUE="true" FIELDS="userid, courseid" COMMENT="Indice unico para evitar duplicados de usuario-curso"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
+
+
